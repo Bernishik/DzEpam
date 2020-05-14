@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <script>
+class Calc{
+  constructor(firstArg, secondArg, name = "Calc") {
+    this.firstArg = firstArg;
+    this.secondArg = secondArg;
+    this.name = name;
+  }
+  set firstArg (arg) {
+      if (arg == 2) {
+        console.log("Arg has no valid value");
+      }else{
+        this._firstArg = arg;
+      }
+      
+  }
+  get firstArg () {
+    return this._firstArg;
+  }
+
+set secondArg (arg) {
+    arg = parseInt(arg);
+    this._secondArg = arg;
+}
+get secondArg() {
+  return this._secondArg;
+}
+add(){
+  return this.firstArg + this.secondArg;
+}
+sub(){
+  return this.firstArg - this.secondArg;
+}
+mul(){
+  return this.firstArg * this.secondArg;
+}
+div(){
+  if(this.secondArg != 0){
+    return this.firstArg / this.secondArg;
+  }else{
+    alert("Error");
+  }
+  
+}
+}
+
+onclick
+// let calc = new Calc(1,2);
+
+// console.log(calc.add());
+
+// calc.firstArg = 3;
+
+// calc.secondArg = "4";
+
+// console.log(calc.add()); //7
+// console.log (calc.mul());
+
+
+  </script>
+
+  <input type="text" id="pol1">
+  <br>
+  <br>
+  <br>
+  <input type="text" id="pol2"> 
+  <br>
+  <br>
+  <button name="plus" id="plus">+</button>
+  <button name="minus" id="minus">-</button>
+  <button name="mul" id="mul">*</button>
+  <button name="divi" id="divi">/</button>
+  <script>
+    let calc = new Calc(0,1);
+    plus.onclick = function(){
+      let first = parseInt(pol1.value);
+      let second =  parseInt(pol2.value);
+      calc.firstArg = first;
+      calc.secondArg = second;
+      alert(calc.add())
+    }
+    minus.onclick = function(){
+      let first = parseInt(pol1.value);
+      let second =  parseInt(pol2.value);
+      calc.firstArg = first;
+      calc.secondArg = second;
+      alert(calc.sub())
+    }
+    mul.onclick = function(){
+      let first = parseInt(pol1.value);
+      let second =  parseInt(pol2.value);
+      calc.firstArg = first;
+      calc.secondArg = second;
+      alert(calc.mul())
+    }
+    divi.onclick = function(){
+      let first = parseInt(pol1.value);
+      let second =  parseInt(pol2.value);
+      calc.firstArg = first;
+      calc.secondArg = second;
+      alert(calc.div())
+    }
+  </script>
+</body>
+</html>
