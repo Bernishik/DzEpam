@@ -1,4 +1,10 @@
 button{
-  width: 50px;
+  width: 60px;
   height: 50px;
+}
+.calc{
+ width: 300px; 
+ margin: 0 auto ;
+ border: 4px dashed yellow; 
+ padding: 10px;
 }
