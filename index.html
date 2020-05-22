@@ -14,25 +14,7 @@ class Calc{
     this.secondArg = secondArg;
     this.name = name;
   }
-  set firstArg (arg) {
-      if (arg == 2) {
-        console.log("Arg has no valid value");
-      }else{
-        this._firstArg = arg;
-      }
-      
-  }
-  get firstArg () {
-    return this._firstArg;
-  }
-
-set secondArg (arg) {
-    arg = parseInt(arg);
-    this._secondArg = arg;
-}
-get secondArg() {
-  return this._secondArg;
-}
+  
 add(){
   return this.firstArg + this.secondArg;
 }
@@ -51,19 +33,6 @@ div(){
   
 }
 }
-
-onclick
-// let calc = new Calc(1,2);
-
-// console.log(calc.add());
-
-// calc.firstArg = 3;
-
-// calc.secondArg = "4";
-
-// console.log(calc.add()); //7
-// console.log (calc.mul());
-
 
   </script>
 
